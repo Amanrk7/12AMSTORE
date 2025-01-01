@@ -1,0 +1,248 @@
+.app {
+  background-color: bisque;
+}
+#banner {
+  width: 15%;
+}
+nav {
+  /* background-color: aqua; */
+  color: black;
+  width: 25%;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+nav ul li {
+  float: left;
+}
+nav ul li a {
+  display: block;
+  color: rgb(229, 255, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+#searchBar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+#searchBar .dropdown {
+  width: 4%;
+}
+#searchBar input {
+  width: 89%;
+  height: 2.7em;
+  padding: 0 18px;
+}
+#dropdownBtn {
+  background-color: #4caf50;
+  color: white;
+  /* padding: 16px; */
+  width: 3.7em;
+  height: 3em;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover #dropdownBtn {
+  background-color: #3e8e41;
+  border: 4px ridge orange;
+}
+#searchBtn {
+  width: 68%;
+  padding: 7px;
+}
+#searchIcon {
+  background-color: rgb(243, 243, 42);
+  width: 2.4em;
+}
+#searchIcon :hover {
+  background-color: rgb(167, 167, 33);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid gold;
+}
+/* ------------footer css------------- */
+#goToTopButton {
+  width: 100%;
+  padding: 8px 6px;
+}
+footer ul {
+  float: left;
+  list-style-type: none;
+}
+#footerTopics {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px ridge gold;
+}
+#footer1stUl > :first-child,
+#footer2ndUl > :first-child,
+#footer3rdUl > :first-child,
+#footer4thUl > :first-child {
+  font-size: x-large;
+  font: bolder;
+}
+#footerLogo {
+  padding: 8px 1px;
+  justify-items: center;
+  align-content: center;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------main contents css --------------------- */
+.item1 {
+  grid-area: header;
+  z-index: 1;
+}
+.item2 {
+  grid-area: menu;
+  height: 64vh;
+  position: relative;
+  top: 89px;
+  background-color: #4caf50;
+}
+.item3 {
+  grid-area: main;
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 64vh;
+  top: 89px;
+  position: relative;
+  background-color: aqua;
+  grid-template-areas:
+    "cards cards cards cards cards"
+    "cards cards cards cards cards"
+    "cards cards cards cards cards"
+    "cards cards cards cards cards"
+    "cards cards cards cards cards"
+    "cards cards cards cards cards";
+  column-gap: 2px;
+  row-gap: 9px;
+  overflow-y: scroll;
+}
+.item4 {
+  grid-area: right;
+  height: 64vh;
+  top: 89px;
+  position: relative;
+  background-color: #3e8e41;
+}
+.item5 {
+  grid-area: footer;
+  z-index: 1;
+}
+#App {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main main right"
+    "footer footer footer footer footer footer";
+}
+.cards {
+  background-color: red;
+  height: 19rem;
+  width: 19rem;
+  margin: 27px 0 27px 0;
+  border-radius: 30px;
+  align-content: center;
+  justify-items: center;
+}
+.cards > :first-child {
+  width: 95%;
+  height: 95%;
+  background-color: #6925257e;
+  border-radius: 30px;
+}
+#transparetShade > :first-child {
+  width: inherit;
+  height: 70%;
+  justify-self: center;
+  border-radius: inherit;
+}
+#productImg {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+#productRelated {
+  height: 30%;
+  width: 95%;
+  display: flex;
+}
+#productRelated > :first-child h2 {
+  margin: 0;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#productRelated > :first-child {
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+}
+#productRelated > :nth-child(2) {
+  width: 17%;
+}
+#cart {
+  width: 50px;
+}
+#similar {
+  width: 52px;
+  height: 32%;
+  border-radius: 10px;
+}
